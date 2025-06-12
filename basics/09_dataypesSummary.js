@@ -1,6 +1,6 @@
 // ## Primitive types
 
-let a=10.2 // NUmber
+let a=10.3 // NUmber
 let b="abc" //string
 let c=true // boolean
 let d=null //empty value
