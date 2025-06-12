@@ -1,5 +1,5 @@
 //number
-let age=18
+let age=19
 console.log(age)
 
 //string
