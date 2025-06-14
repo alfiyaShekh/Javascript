@@ -26,3 +26,18 @@ function handleObject(anyobj){
     
 }
 handleObject(user)
+
+//directly passing object without declaring using variable
+handleObject({
+    id:678,
+    name:"xyz"
+})
+
+// passing array to function
+const arr=[5,6,7]
+
+function passingArray(arr){
+    console.log(arr[0]);
+}
+passingArray(arr)
+passingArray([0,6,5]) // directly passing array
