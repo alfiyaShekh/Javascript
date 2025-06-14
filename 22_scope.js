@@ -36,8 +36,19 @@ function addone(num){
 
 
 
-addtwo(5)
+//addtwo(5)
 // variable function will give error if called before its function definition
  const addtwo=function(num){
     console.log(num+2);
+}
+
+
+score=0 // in js 0,"",null,undefined are considered as false
+if(score){
+    console.log("Pass");
+    
+}
+else{
+    console.log("Fail");
+    
 }
