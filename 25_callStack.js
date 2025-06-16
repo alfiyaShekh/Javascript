@@ -44,7 +44,7 @@ whenever function is called above process is done and in this box again memory p
     then execution phase,
     num1 => 2
     num2 => 3
-    total =>5 the total will return in global execution context
+    total =>5 // the total will return in global execution context
 
     whenever line 11 is executed again this line 9 process will get executed
 */
