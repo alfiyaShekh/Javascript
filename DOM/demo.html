@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NodeList</title>
+    <style>
+        body{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <div class="bg-black">
+        <h1 class="heading" id="title">Dom learning on chai and code
+            <span style="display: none;">hidden</span>
+        </h1>
+        <h2>Lorem, ipsum dolor.</h2>
+        <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit </h2>
+        <p class="heading2">Lorem ipsum dolor sit amet.</p>
+        <input type="password">
+
+        <ul>
+        <li class="list">coffe</li>
+        <li class="list">milk</li>
+        <li class="list">tea</li>
+    </ul>
+     </div>
+</body>
+</html>
+
+
+<!-- ** innerHTML , textContent , innerText **
+let txt=document.getElementById('title')
+undefined
+txt.innerHTML
+'Dom learning on chai and code\n            <span style="display: none;">hidden</span>\n 
+       '
+txt.innerText
+'Dom learning on chai and code'
+
+txt.textContent
+'Dom learning on chai and code\n            hidden\n        '
+ -->
+
+
+
+ <!-- ** querySelector **
+
+ document.querySelector('h2')
+<h2>​Lorem, ipsum dolor.​</h2>​
+
+document.querySelectorAll('h2')
+NodeList(2) [h2, h2]0: h21: h2length: 2[[Prototype]]: NodeList
+
+document.querySelector('#title')
+<h1 class=​"heading" id=​"title">​…​</h1>​
+
+document.querySelector('.heading')
+<h1 class=​"heading" id=​"title">​…​</h1>​
+
+document.querySelector('input[type="password"]')
+<input type=​"password">​
+
+const mylist=document.querySelector('ul')
+undefined
+
+mylist.querySelector('li')
+<li>​…​</li>​::marker​"coffe"</li>​
+
+const first=mylist.querySelector('li')
+undefined
+
+first.style.backgroundColor="green"
+'green'
+
+irst.innerHTML="almond milk"
+'almond milk'
+
+const item=document.getElementsByClassName('list')
+undefined
+item
+HTMLCollection(3) [li.list, li.list, li.list]0: li.list1: li.list2: li.listlength: 3[[Prototype]]: HTMLCollectionitem: ƒ item()length: (...)namedItem: ƒ namedItem()constructor: ƒ HTMLCollection()Symbol(Symbol.iterator): ƒ values()Symbol(Symbol.toStringTag): "HTMLCollection"get length: ƒ length()[[Prototype]]: Object
+
+const myConvertedArray=Array.from(item)
+undefined
+for (let name of myConvertedArray) {
+    name.style.color="red"
+}
+-->
