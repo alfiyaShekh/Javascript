@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black;color: white;">
+    
+</body>
+<script>
+//   const div=document.createElement('div')
+//   console.log(div);
+//   div.className='main'
+//   div.id='myID'
+//   div.setAttribute('title','generated')
+//   div.style.backgroundColor='red'
+//   div.style.padding='12px'
+//   div.innerText="Chai and code"
+// //   const addnode=document.createTextNode="chai and code"
+// //   div.appendChild(addnode)
+//   document.body.appendChild(div)
+
+
+function createDiv(name,classname,id,back){
+     name=document.createElement('div')
+    classname=name.className
+    id=name.id
+    name.style.backgroundColor=back
+    name.innerText="Creating div using JS"
+    name.style.marginBottom='10px'
+    document.body.appendChild(name)
+
+}
+for (let i = 0; i <=5; i++) {
+    
+    createDiv('name','parent','div','red')
+}
+
+</script>
+</html>
