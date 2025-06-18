@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: black; color:white">
+    <ul class="js">
+         <li class="list">JS</li>
+         <li class="list">Java</li>
+         
+    </ul>
+</body>
+<script>
+    function addLanguage(langName,color){
+       
+       const lang= document.createElement('li')
+        lang.innerHTML=langName
+        lang.style.color=color
+        document.querySelector('.js').appendChild(lang)
+    }
+    addLanguage("Python","red")
+    addLanguage("Java","yellow")
+    addLanguage("Typescript","orange")
+
+    // Optimized approach for adding element
+    function addoptiLanguage(langName){
+        const lang=document.createElement('li')
+        lang.appendChild(document.createTextNode(lang))
+        document.querySelector('.js').appendChild(lang)
+    }
+    addLanguage("ruby")
+
+    //editing value
+    const seclang=document.querySelector('li:nth-child(2)')
+    seclang.style.color="blue"
+    
+    const firstlan=document.querySelector("li:first-child")
+    firstlan.outerHTML='<li>Javascript</li>'
+
+    //remove element
+    const lastlang=document.querySelector("li:last-child")
+    lastlang.remove()
+    
+</script>
+</html>
