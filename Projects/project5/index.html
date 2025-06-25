@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji changer</title>
+    <style>
+           body {
+        background-color: #212121;
+        color: #fff;
+      }
+      .center {
+        display: flex;
+        height: 10vh;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      .emoji{
+     border-radius: 10px;
+       margin-left: 500px;
+       background-image: url(image.png);
+        background-repeat: no-repeat;
+        background-position: center;
+        width: 600px;
+        height: 600px;
+        color:white
+       }
+     
+    </style>
+</head>
+<body>
+    <div class="center">As a user hover the mouse over emoji, get a new emoji. As the user moves away mouse turn it into gray-scale</div><br>
+    <div class="emoji" onmouseover="change()" onmouseout="reset()"></div>
+</body>
+<script src="project5.js"></script>
+</html>
