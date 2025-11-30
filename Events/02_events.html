@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background: #000; color: aliceblue;">
+    <h2>small project on events</h2>
+    <div>
+        <ul id="images">
+            <li>
+                <img width="200px" height="200px" id="first" src="https://images.pexels.com/photos/34875154/pexels-photo-34875154.jpeg" alt="photoshop">
+            </li>
+            <li>
+                <img width="200px" height="100px" id="second" src="https://images.pexels.com/photos/29120755/pexels-photo-29120755.jpeg">
+            </li>
+            <li>
+                
+                <img width="200px" height="100px" onclick="alert('child')" id="third" src="https://images.pexels.com/photos/27903954/pexels-photo-27903954.jpeg">
+            </li>
+            <li>
+                <a style="color:aliceblue" href="https://google.com" id="google">Google</a>
+            </li>
+            
+        </ul>
+    </div>
+    
+</body>
+<script>
+ 
+ document.getElementById('images').addEventListener('click',function(e){
+       //console.log(e.target); // to show from wherethe event is occruing
+
+       //console.log(e.target.parentNode); // to select parent node
+       let removeIt=e.target.parentNode;
+       console.log(removeIt.parentNode);
+       if(event.target.tagName==='IMG'){
+        console.log(e.target.id);
+        
+           removeIt.remove();
+       }
+       
+       
+
+ },false)
+</script>
+</html>
