@@ -32,8 +32,52 @@
 //     alert("cake")
 //   }
 
-document.getElementById('second').addEventListener('click',function(){
-    alert("cake")
-},false) //best approach
+// document.getElementById('second').addEventListener('click',function(){
+//     alert("cake")
+// },false) //best approach
+
+
+
+// event propagation-bubbling of event(from inside to outside)
+document.getElementById("images").addEventListener('click',function(){
+    //console.log("images clicked");
+    
+})
+document.getElementById("second").addEventListener('click',function(){
+    //console.log("cake clicked");
+    
+})
+
+
+
+// event propagation-capturing of event
+document.getElementById("images").addEventListener('click',function(){
+    //console.log("images clicked");
+    
+},true)
+document.getElementById("second").addEventListener('click',function(){
+   // console.log("cake clicked");
+    
+},true)
+
+
+
+
+// to stop bubbling of event
+document.getElementById("second").addEventListener('click',function(e){
+    console.log("cake clicked");
+    e.stopPropagation();
+    
+})
+
+
+document.getElementById('google').addEventListener('click',function(e){
+     e.preventDefault() // prevent linking to website here
+    console.log("google");
+},false)
+
+
+
+
 </script>
 </html>
