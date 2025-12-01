@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API mini project</title>
+    <!-- https://api.github.com/users/hiteshchoudhary -->
+    <style>
+        body{
+            background-color: beige;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            flex-direction: column;
+            color:white
+        }
+        .photo{
+            height: 250px;
+            width: 250px;
+            background-color: black;
+            border-radius: 10px;
+            border: 5px red solid;
+           
+        }
+        #followers{
+            background-color: black;
+            color: white;
+            width: 200px;
+            height: 50px;
+            border-radius: 10px;
+            border: 5px red solid;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            
+        }
+        #click{
+            background-color: crimson;
+            color: black;
+            border-radius: 5px;
+            font-size: large;
+        }
+    </style>
+</head>
+<body>
+    <div class="photo">
+       
+    </div><br>
+    <div id="followers"></div><br>
+    <button id="click">Click here</button>
+</body>
+<script>
+    const requestUrl='https://api.github.com/users/hiteshchoudhary'
+    const xhr= new XMLHttpRequest()
+    xhr.open('GET',requestUrl)
+    
+const follower=document.getElementById('followers')
+const img=document.querySelector('.photo')
+
+document.getElementById('click').addEventListener('click',function(){
+   xhr.onreadystatechange=function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState===4){
+          
+            const data=JSON.parse(this.responseText)
+            follower.innerHTML=data.followers 
+            img.innerHTML="<img src='https://avatars.githubusercontent.com/u/11613311?v=4' height='250px' width='250px'>"
+ }
+        
+    }
+   xhr.send()
+    
+   })
+</script>
+</html>
