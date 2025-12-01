@@ -16,7 +16,7 @@
         console.log(xhr.readyState);
         if(xhr.readyState===4){
             //console.log(this.responseText);
-            const data=JSON.parse(this.responseText) //convert string to JSON
+            const data=JSON.parse(this.responseText) //convert string to JS object
             console.log(typeof data);
             
             console.log(data.followers);
